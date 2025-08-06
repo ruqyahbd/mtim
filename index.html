@@ -17,7 +17,6 @@
         /* --- General Styling & Variables --- */
         :root {
             --primary-color: #007bff;
-            --secondary-color: #28a745;
             --bg-color: #f8f9fa;
             --card-bg-color: #ffffff;
             --text-color: #343a40;
@@ -41,14 +40,12 @@
             padding: 0;
         }
 
-        /* --- Container & Layout --- */
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        /* --- Header & Intro Section --- */
         .page-header {
             text-align: center;
             margin-bottom: 2rem;
@@ -57,7 +54,7 @@
 
         .page-header h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem; /* Adjusted for longer title */
+            font-size: 2.5rem;
             color: var(--text-color);
             margin-bottom: 1rem;
         }
@@ -146,18 +143,17 @@
             background-color: #fff;
             border-radius: 8px;
             border: 1px solid var(--border-color);
-            display: none; /* Hidden by default */
-            white-space: pre-wrap; /* Preserves newlines */
+            display: none;
+            white-space: pre-wrap;
             line-height: 1.8;
         }
 
-        /* --- Custom Content Sections --- */
         .content-section h2 {
             font-family: 'Montserrat', sans-serif;
             margin-bottom: 1rem;
         }
         
-        .content-section p, .content-section ul, .content-section ol {
+        .content-section p {
              max-width: 100%;
              margin-bottom: 1rem;
         }
@@ -192,53 +188,38 @@
             color: var(--light-text-color);
         }
 
-        /* --- Article List --- */
+        /* --- Simplified Article List --- */
         #articleList {
-            display: grid;
-            gap: 1.5rem;
-        }
-        
-        .blog-post {
             background-color: var(--card-bg-color);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 1.5rem 2rem;
             box-shadow: var(--shadow);
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        }
-
-        .blog-post:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+            overflow: hidden; /* To keep border-radius */
         }
         
-        .blog-post h3 {
-            font-family: 'Montserrat', sans-serif;
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-            font-size: 1.25rem;
-        }
-
-        .blog-post h3 a {
+        .article-item {
+            display: block;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
             text-decoration: none;
             color: var(--text-color);
-            transition: color 0.2s;
+            transition: background-color 0.2s;
+        }
+        
+        .article-item:last-child {
+            border-bottom: none;
         }
 
-        .blog-post h3 a:hover {
+        .article-item:hover {
+            background-color: #f8f9fa;
             color: var(--primary-color);
         }
         
-        .post-tags span {
-            display: inline-block;
-            background-color: #e9f5ec;
-            color: #217346;
-            padding: 0.25rem 0.75rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-right: 0.5rem;
-            margin-top: 0.5rem;
+        .article-item h3 {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            font-size: 1.15rem;
+            font-weight: 600;
         }
 
         #noResultsMessage {
@@ -271,9 +252,6 @@
             .page-header h1 {
                 font-size: 2rem;
             }
-            .gemini-qa-section {
-                padding: 1.5rem;
-            }
         }
     </style>
 </head>
@@ -282,41 +260,22 @@
     <div class="container">
         <header class="page-header">
             <h1>Muhammad Tim Humble's Ruqyah Notes & Lectures Archive</h1>
-            <p>Alḥamdulillāh, we have managed to recover and organize many of Ustadh Muhammad Tim Humble’s lectures and notes, especially those previously available on his websites:</p>
-            <ul>
-                <li>🌐 mohammadtim.com (<a href="https://web.archive.org/web/20240518103905/https://muhammadtim.com/" target="_blank" rel="noopener noreferrer">archive link</a>)</li>
-                <li>🗒️ note.mohammadtim.com (<a href="https://web.archive.org/web/20241110023855/https://notes.muhammadtim.com/" target="_blank" rel="noopener noreferrer">archive link</a>)</li>
-            </ul>
-            <p>As these websites have been offline for quite some time, many of us have deeply felt the absence of their valuable content. This repository was created to serve as a centralized archive of what could be retrieved from available public resources.</p>
+            <p>Alḥamdulillāh, we have managed to recover and organize many of Ustadh Muhammad Tim Humble’s lectures and notes, especially those previously available on his websites.</p>
         </header>
 
         <main>
-            <!-- ==== GEMINI Q&A SECTION ==== -->
-            <section class="gemini-qa-section">
-                <h2>✨ Ask a Question about Ruqyah</h2>
-                <textarea id="aiQuestion" placeholder="e.g., What are the signs of the evil eye? How do I perform ruqyah on myself?"></textarea>
-                <button id="askAiButton">
-                    <span class="spinner"></span>
-                    <span class="button-text">Get an Answer with AI</span>
-                </button>
-                <div id="aiAnswerContainer"></div>
-            </section>
 
-            <!-- ==== NOTES & DISCLAIMER SECTION ==== -->
             <div class="content-section">
                 <hr />
-                <h2>⚠️ Important Note</h2>
-                <p>Some of the internal links within these articles originally pointed to other posts on the same site. As those sites are down, many of those links may currently lead to 404 errors. We are gradually working to relink those contents properly within this archive. Please be patient and feel free to <a href="https://github.com/ruqyahbd/mtim/issues" target="_blank" rel="noopener noreferrer">contribute</a>.</p>
-                <hr />
-                <h2>📝 Disclaimer</h2>
-                <p>This is an unofficial archive created for educational and preservation purposes. All content belongs to its respective author, Ustadh Muhammad Tim Humble. The AI-generated answers are for informational purposes and should not replace consultation with a qualified scholar or raaqi.</p>
+                <h2>⚠️ Important Note & Disclaimer</h2>
+                <p>This is an unofficial archive. All content belongs to its respective author. The AI-generated answers are for informational purposes and should not replace consultation with a qualified scholar or raaqi. Internal links in the original articles may be broken.</p>
                 <hr />
                 <h2>✨ List of All Articles and Pages</h2>
             </div>
             
             <div class="search-container">
                 <i class="fas fa-search"></i>
-                <input type="text" id="searchInput" placeholder="Search articles by title or keyword (e.g., 'Ruqyah', 'Jinn')...">
+                <input type="text" id="searchInput" placeholder="Search articles by title or keyword...">
             </div>
 
             <div id="articleList"></div>
@@ -325,9 +284,18 @@
                 <p>No articles found matching your search. Try another keyword!</p>
             </div>
         </main>
-        
+
+                    <section class="gemini-qa-section">
+                <h2>✨ Ask a Question about Ruqyah (from Gemini Ai)</h2>
+                <textarea id="aiQuestion" placeholder="e.g., What are the signs of the evil eye? How do I perform ruqyah on myself?"></textarea>
+                <button id="askAiButton">
+                    <span class="spinner"></span>
+                    <span class="button-text">Get an Answer with AI</span>
+                </button>
+                <div id="aiAnswerContainer"></div>
+            </section>
+
         <footer class="page-footer">
-            <p>This is an unofficial archive. All content belongs to Ustadh Muhammad Tim Humble.</p>
             <p>🔗 <strong>Project maintained by:</strong> <a href="https://github.com/ruqyahbd" target="_blank" rel="noopener noreferrer">ruqyahbd.org GitHub team</a></p>
         </footer>
     </div>
@@ -398,26 +366,20 @@
             
             function renderArticles(articlesToRender) {
                 articleListContainer.innerHTML = '';
+                if (articlesToRender.length === 0) return;
+
                 articlesToRender.forEach(articleData => {
-                    const articleElement = document.createElement('article');
-                    articleElement.className = 'blog-post';
-                    const title = document.createElement('h3');
                     const link = document.createElement('a');
                     link.href = articleData.url;
-                    link.textContent = articleData.title;
+                    link.className = 'article-item';
                     link.target = '_blank';
                     link.rel = 'noopener noreferrer';
-                    title.appendChild(link);
-                    const tagsContainer = document.createElement('div');
-                    tagsContainer.className = 'post-tags';
-                    articleData.tags.forEach(tagText => {
-                        const tag = document.createElement('span');
-                        tag.textContent = tagText;
-                        tagsContainer.appendChild(tag);
-                    });
-                    articleElement.appendChild(title);
-                    articleElement.appendChild(tagsContainer);
-                    articleListContainer.appendChild(articleElement);
+
+                    const title = document.createElement('h3');
+                    title.textContent = articleData.title;
+                    
+                    link.appendChild(title);
+                    articleListContainer.appendChild(link);
                 });
             }
             
@@ -431,11 +393,11 @@
                 const filteredArticles = articlesData.filter(article => {
                     const title = article.title.toLowerCase();
                     const tags = article.tags.join(' ').toLowerCase();
-                    const articleText = title + ' ' + tags;
-                    return articleText.includes(searchQuery);
+                    return (title + ' ' + tags).includes(searchQuery);
                 });
                 renderArticles(filteredArticles);
-                noResultsMessage.style.display = filteredArticles.length === 0 ? 'block' : 'none';
+                noResultsMessage.style.display = filteredArticles.length === 0 && searchQuery.length > 0 ? 'block' : 'none';
+                articleListContainer.style.display = filteredArticles.length > 0 ? 'block' : 'none';
             });
 
             // --- Gemini API Integration ---
@@ -453,49 +415,32 @@
                     return;
                 }
 
-                // Show loading state
                 spinner.style.display = 'inline-block';
                 buttonText.textContent = 'Getting Answer...';
                 askAiButton.disabled = true;
                 aiAnswerContainer.style.display = 'none';
 
-                // Construct the prompt for the Gemini API
-                const systemPrompt = "You are an expert assistant knowledgeable in Islamic Ruqyah, Jinn, Magic, and the Evil Eye, based on the teachings of Muhammad Tim Humble, which are strictly from the Qur'an and Sunnah. Answer the following user's question clearly and concisely. Provide practical steps or advice where applicable. Do not give fatawa (religious rulings), but provide information based on authentic sources. Start the answer directly without introductory phrases like 'Here is the answer'.";
-                
-                const fullPrompt = `${systemPrompt}\n\nUser Question: "${question}"`;
-
-                const apiKey = ""; // API key will be handled by the environment
-                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
-
                 try {
-                    const response = await fetch(apiUrl, {
+                    // This now calls your secure backend function
+                    const response = await fetch('/api/ask', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({
-                            contents: [{ role: "user", parts: [{ text: fullPrompt }] }]
-                        })
+                        body: JSON.stringify({ question: question })
                     });
 
                     if (!response.ok) {
-                        throw new Error(`API error: ${response.statusText}`);
+                        throw new Error(`Server error: ${response.statusText}`);
                     }
 
                     const result = await response.json();
-                    
-                    let answerText = "Sorry, I couldn't get a valid response. Please try again.";
-                    if (result.candidates && result.candidates.length > 0 && result.candidates[0].content && result.candidates[0].content.parts && result.candidates[0].content.parts.length > 0) {
-                      answerText = result.candidates[0].content.parts[0].text;
-                    }
-
-                    aiAnswerContainer.textContent = answerText;
+                    aiAnswerContainer.textContent = result.answer;
                     aiAnswerContainer.style.display = 'block';
 
                 } catch (error) {
-                    console.error("Error calling Gemini API:", error);
-                    aiAnswerContainer.textContent = 'An error occurred while fetching the answer. Please check the console for details and try again later.';
+                    console.error("Error calling backend function:", error);
+                    aiAnswerContainer.textContent = 'An error occurred. Please check the console and try again.';
                     aiAnswerContainer.style.display = 'block';
                 } finally {
-                    // Hide loading state
                     spinner.style.display = 'none';
                     buttonText.textContent = 'Get an Answer with AI';
                     askAiButton.disabled = false;
