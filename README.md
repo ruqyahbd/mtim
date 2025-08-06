@@ -1,4 +1,4 @@
-# 🧿 Muhammad Tim Humble's Ruqyah Notes & Lectures Archive
+# Muhammad Tim Humble's Ruqyah Notes & Lectures Archive
 
 Alḥamdulillāh, we have managed to recover and organize many of Ustadh Muhammad Tim Humble’s lectures and notes, especially those previously available on his websites:
 
