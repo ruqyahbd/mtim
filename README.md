@@ -40,7 +40,7 @@ You can access the list of articles and lecture notes from the [Wiki section of 
 3.	 [An Advice Regarding Sickness & Difficulty, Especially in Relation to Magic (part 1–8)](https://github.com/ruqyahbd/mtim/wiki/An-Advice-Regarding-Sickness-&-Difficulty,-Especially-in-Relation-to-Magic-(part-1%E2%80%908))
 4.	 [An Update From Dubai](https://github.com/ruqyahbd/mtim/wiki/An-Update-From-Dubai)
 5.	 [Closing Windows and Doors at Night](https://github.com/ruqyahbd/mtim/wiki/Closing-Windows-and-Doors-at-Night)
-6.	 [Confusion Over How to Seek Blessings for Someone to Prevent the Evil Eye](https://github.com/ruqyahbd/mtim/wiki/Confusion-Over-How-to-S...
+6.	 [Confusion Over How to Seek Blessings for Someone to Prevent the Evil Eye](https://github.com/ruqyahbd/mtim/wiki/Confusion-Over-How-to-Seek-Blessings-for-Someone-to-Prevent-the-Evil-Eye)
 7.	 [Contact Muhammad Tim Humble](https://github.com/ruqyahbd/mtim/wiki/Contact-Muhammad-Tim-Humble)
 8.	 [Dealing with Waswasah](https://github.com/ruqyahbd/mtim/wiki/Dealing-with-Waswasah)
 9.	 [Frequent Nightmares](https://github.com/ruqyahbd/mtim/wiki/Frequent-Nightmares)
