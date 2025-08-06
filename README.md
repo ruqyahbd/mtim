@@ -99,4 +99,5 @@ You can access the list of articles and lecture notes from the [Wiki section of 
 ## 🤝 Contributing
 This is an open and collaborative effort. If you have any missing notes, old downloads, or related content from Ustadh Tim Humble that’s not yet here, please consider sharing via pull request or opening an issue.
 📩 Your help will benefit many others seeking Ruqyah guidance, in shā’ Allāh.
-🔗 **Project maintained by:** [ruqyahbd GitHub team](https://github.com/ruqyahbd)
+
+🔗 **Project maintained by:** [ruqyahbd.org GitHub team](https://github.com/ruqyahbd)
