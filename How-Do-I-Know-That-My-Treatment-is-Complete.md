@@ -1,0 +1,22 @@
+[published: true]:/
+[date: 2015-08-13]:/
+[title: How Do I Know That My Treatment is Complete?]:/
+
+# How Do I Know That My Treatment is Complete?
+
+_**Question**_
+
+I've been doing ruqyah for some time, and my symptoms have improved. How do I know when my treatment is complete, and when should I stop doing ruqyah?
+
+_**Answer**_
+
+In my opinion, ruqyah is only judged as having been completely successful when the person experiences no further symptoms, and has been blessed with complete relief from the particular problem that they were suffering from. This is something which usually happens in phases, and each phase has its own unique challenges. In some ways, the latter stages of treatment, when the patient is feeling better, is one of the most important times for ruqyah, and one of the times when people make the most mistakes.
+
+Every case is different, and not everyone experiences a phase where things feel better; some people simply build up to a point at which their reaction is at its strongest, and then the jinn leave, and the person returns completely to normal. However, whether this happens, or whether the person experiences gradual relief from their symptoms, there are some very important points to bear in mind, when either nearing or has reached the end of treatment. I have tried to summarise them, as follows:-
+
+1. Do not stop ruqyah. This is the #1 mistake that we see people make. One *jinni* leaves, and so the person feels so much better that they stop treatment. I personally recommend one complete month of ruqyah, at the same intensity as before, until I would be comfortable saying that the person is genuinely better. This one month (or whatever you decide to make it), has saved me - by the grace of Allāh - from many mistakes, when I personally thought that the person was better, but something remained. This can either be because the jinn is fooling you into thinking that they have gone, or because on jinni has left and another, who was latent, becomes active. It also catches cases of the jinni returning to the person after leaving, and cases where the person has been afflicted with something, such as the evil eye, leading to jinn possession, in which the jinni leaves, but the effects of the prior affliction remain. Note that the raaqi does not necessarily have to read for this period, but the patient and/or family members can read, and the raaqi can keep an eye on things, from time to time.
+2. Don't accept 90%. This is closely related to the point made above. A lot of people get to 90% better, then stop, because they think that is good enough. The affliction then has the chance to grow and flourish again. If you had cancer, you would not be content to stop with 90% of the malignant cancer removed, because you know that the 10% has the potential to grow again. Likewise, you should not be content with 90% of the affliction gone - aim for 100%.
+3. Different phases mean different modes of attack for the shayṭān to take advantage of. If one door closes for the shayṭān, he will simply move on to another method. So, it might be that the shaking and the fitting stops, but the whispering and the confusion increases. Then, the whispering stops, but laziness in the prayer kicks in. The key to successful treatment is remaining constant and patient in tackling the problem, and continuing to adapt to the changes that are happening. One one hand, this requires consistency: don't stop the ruqyah programme, no matter what happens. On the other hand, it requires adding specific things to deal with specific challenges. For example, adding the information [in this article](/waswasah), in order to deal specifically with the whispering, while not stopping the usual ruqyah programme.
+4. Once the problem is gone, the person remains vulnerable. I liken this to a medical patient who has just undergone major surgery. Upon successful completion of the procedure, they remain vulnerable to illness and infection. In my experience, this is also true of people who have completed ruqyah; they remain vulnerable to repeat affliction. For this reason, even when the ruqyah stops, the person must be extremely observant in protecting themselves from further problems. See [this blog post](/posts/how-can-i-protect-myself) for more information. Finally, they should be willing to resume their treatment at the first sign of a relapse.
+
+Allāh knows best.
