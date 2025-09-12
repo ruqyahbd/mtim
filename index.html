@@ -48,8 +48,8 @@
 
         .page-header {
             text-align: center;
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
         }
 
         .page-header h1 {
@@ -262,25 +262,16 @@
             <h1>Muhammad Tim Humble's Ruqyah Notes & Lectures Archive</h1>
             <p>Alḥamdulillāh, we have managed to recover and organize many of Ustadh Muhammad Tim Humble’s lectures and notes, especially those previously available on his websites.</p>
         </header>
-
         <main>
             <div class="content-section">
                 <hr />
                 <h3>⚠️ Important Note & Disclaimer</h2>
-                <p>This is an unofficial archive created for educational and preservation purposes only. All content in articles belongs to its respective author, Ustadh Muhammad Tim Humble. May Allah reward him immensely for his service to the Ummah. Many of Internal links in the original articles may be broken, and The AI-generated answers are for easy informational purposes and should not replace consultation with a qualified scholar or raaqi.</p>
+                <p>This is an unofficial archive created solely for educational and preservation purposes. All content in the articles belongs to its original author, Ustadh Muhammad Tim Humble. May Allah reward him immensely for his service to the Ummah.<br/>
+Please note that many internal links in the original articles may be broken. Additionally, any AI-generated summaries or explanations are intended for general informational purposes only and should not replace consultation with a qualified scholar or Raqi. We encourage you to read the original articles thoroughly to obtain accurate information.
+                </p>
                 <hr/>
             </div>
             
-                    <section class="gemini-qa-section">
-                <h2>✨ Ask a Question about Ruqyah (from Gemini Ai)</h2>
-                <textarea id="aiQuestion" placeholder="e.g., What are the signs of the evil eye? How do I perform ruqyah on myself?"></textarea>
-                <button id="askAiButton">
-                    <span class="spinner"></span>
-                    <span class="button-text">Get an Answer with AI</span>
-                </button>
-                <div id="aiAnswerContainer"></div>
-            </section>
-        <hr />
         <h2>✨ List of All Articles and Pages</h2>
             <div class="search-container">
                 <i class="fas fa-search"></i>
@@ -293,6 +284,25 @@
                 <p>No articles found matching your search. Try another keyword!</p>
             </div>
         </main>
+      
+            <hr />        
+            <section class="gemini-qa-section">
+                <h2>🔍 Search inside articles (with GSE)</h2>
+               <script async src="https://cse.google.com/cse.js?cx=35d004f8610e745fc">
+                </script>
+                <div class="gcse-search"></div>
+            </section>
+        <hr />
+        
+         <section class="gemini-qa-section">
+            <h2>✨ Ask a Question about Ruqyah (from Gemini Ai)</h2>
+                <textarea id="aiQuestion" placeholder="e.g., What are the signs of the evil eye? How do I perform ruqyah on myself?"></textarea>
+                <button id="askAiButton">
+                    <span class="spinner"></span>
+                    <span class="button-text">Get an Answer with AI</span>
+                </button>
+                <div id="aiAnswerContainer"></div>
+        </section>
 
         <footer class="page-footer">
             <p>©️ <strong>Contribute on the Project @ </strong> <a href="https://github.com/ruqyahbd/mtim" target="_blank" rel="noopener noreferrer">Github Repo</a></p>
@@ -340,6 +350,7 @@
                 { title: "Note: The Raaqi & His Family", url: "https://github.com/ruqyahbd/mtim/wiki/Note:-The-Raaqi-&-His-Family", tags: ['Notes', 'Raaqi', 'Family'] },
                 { title: "Note: The Ruqya Session", url: "https://github.com/ruqyahbd/mtim/wiki/Note:-The-Ruqya-Session", tags: ['Notes', 'Ruqyah', 'Session'] },
                 { title: "Note: The World of the Jinn", url: "https://github.com/ruqyahbd/mtim/wiki/Note:-The-World-of-the-Jinn", tags: ['Notes', 'Jinn'] },
+                { title: "Note: A Simple Guide to self Ruqyah", url: "https://github.com/ruqyahbd/mtim/wiki/Note:-A-Simple-Guide-to-self-Ruqyah", tags: ['Self Ruqyah', 'Ruqyah', 'Guide'] },
                 { title: "Notes, Texts, and Audio for The Essentials Course", url: "https://github.com/ruqyahbd/mtim/wiki/Notes,-Texts,-and-Audio-for-The-Essentials-Course", tags: ['Notes', 'Course'] },
                 { title: "O Nouman Ali Khan…Fear Allāh!", url: "https://github.com/ruqyahbd/mtim/wiki/O-Nouman-Ali-Khan…Fear-All%C4%81h!", tags: ['Refutation', 'Advice'] },
                 { title: "Psoriasis, Eczema, and Prophetic Medicine", url: "https://github.com/ruqyahbd/mtim/wiki/Psoriasis,-Eczema,-and-Prophetic-Medicine", tags: ['Medicine', 'Health'] },
