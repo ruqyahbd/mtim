@@ -1,0 +1,17 @@
+title: "mtim.ruqyahbd.org"
+description: "Muhammad Tim Humble's Notes Archive"
+baseurl: ""        # leave blank for user/organization site
+url: "https://mtim.ruqyahbd.org/"
+theme: minima
+
+# Optional settings you can customize:
+# author: "Muhammad Tim Humble"
+# plugins:
+#   - jekyll-feed
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  jekyll-feed
