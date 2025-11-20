@@ -116,6 +116,7 @@ layout: null
     <div class="logo">mtim.ruqyahbd.org</div>
     <h1>Ruqyah Notes & Articles Archive</h1>
     <p class="lede">Search and read every Markdown file in this repository directly from this site—no external wiki links.</p>
+    <p class="lede">Search and read the recovered writings of Ustādh Muhammad Tim Humble directly from this site.</p>
   </header>
 
   <main class="container">
@@ -141,6 +142,13 @@ layout: null
         <li>Click any card to open the Markdown directly from this repo in the built-in reader.</li>
       </ul>
       <p class="lede" style="margin-top: 0.9rem;">If you see an empty list locally, run Jekyll (<code>bundle exec jekyll serve</code>) or publish to GitHub Pages so the page can index the files.</p>
+      <p class="lede" style="margin-top: 0.35rem;">GitHub Pages builds the article list for you so every Markdown file in this repository is searchable and readable here.</p>
+      <ul style="color: var(--muted); line-height: 1.7; padding-left: 1.1rem; margin: 0.2rem 0 0;">
+        <li>The <code>assets/data/articles.json</code> feed is generated during the Pages build, collecting every <code>.md</code> file except <code>README.md</code>.</li>
+        <li>The search box filters that feed instantly by title or filename—no extra setup needed.</li>
+        <li>Clicking a card opens the reader, which fetches and renders the raw Markdown directly from the repository.</li>
+      </ul>
+      <p class="lede" style="margin-top: 0.9rem;">If you see an empty list locally, run Jekyll (<code>bundle exec jekyll serve</code>) or publish to GitHub Pages so the JSON feed is generated.</p>
     </section>
 
     <div class="footer">Built for easier access to the archive. <a href="https://github.com/ruqyahbd/mtim">View on GitHub</a>.</div>
@@ -201,6 +209,22 @@ layout: null
         searchable: `${item.title} ${item.basename}`.toLowerCase(),
       })).sort((a, b) => a.title.localeCompare(b.title));
       renderArticles(articles);
+    async function loadArticles() {
+      try {
+        const response = await fetch('assets/data/articles.json');
+        if (!response.ok) throw new Error('Failed to load articles');
+        const data = await response.json();
+        articles = data.map((item) => ({
+          ...item,
+          searchable: `${item.title} ${item.basename}`.toLowerCase(),
+        })).sort((a, b) => a.title.localeCompare(b.title));
+        renderArticles(articles);
+      } catch (error) {
+        countPill.textContent = 'Unable to load articles';
+        emptyState.hidden = false;
+        emptyState.textContent = 'Something went wrong while loading the archive.';
+        console.error(error);
+      }
     }
 
     searchInput.addEventListener('input', (event) => filterArticles(event.target.value));
