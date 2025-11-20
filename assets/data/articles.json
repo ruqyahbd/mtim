@@ -1,0 +1,17 @@
+---
+layout: null
+permalink: /assets/data/articles.json
+---
+[
+{% assign md_files = site.static_files | where_exp: "file", "file.extname == '.md'" %}
+{% assign filtered = md_files | where_exp: "file", "file.name != 'README.md'" %}
+{% for file in filtered %}
+  {% capture pretty_title %}{{ file.name | remove: '.md' | replace: '-', ' ' | replace: '_', ' ' | strip }}{% endcapture %}
+  {
+    "title": {{ pretty_title | strip_newlines | jsonify }},
+    "basename": {{ file.name | jsonify }},
+    "path": {{ file.path | jsonify }},
+    "url": {{ file.path | relative_url | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
