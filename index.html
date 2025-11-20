@@ -1,464 +1,210 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Tim Humble's Ruqyah Notes & Lectures Archive</title>
-    
-    <!-- Google Fonts for a fresh look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Tim Humble | Ruqyah Notes Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --border: #e5e7eb;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
 
-    <style>
-        /* --- General Styling & Variables --- */
-        :root {
-            --primary-color: #007bff;
-            --bg-color: #f8f9fa;
-            --card-bg-color: #ffffff;
-            --text-color: #343a40;
-            --light-text-color: #6c757d;
-            --border-color: #dee2e6;
-            --shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-            --gemini-bg: #f0f4ff;
-            --gemini-border: #d6e2ff;
-        }
+    * { box-sizing: border-box; }
 
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at 10% 20%, #eef2ff, #f5f7fb 25%),
+                  radial-gradient(circle at 80% 0%, #ecfeff, #f5f7fb 35%),
+                  var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
 
-        body {
-            font-family: 'Lato', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.7;
-            margin: 0;
-            padding: 0;
-        }
+    header {
+      padding: 3rem 1.5rem 1.5rem;
+      text-align: center;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+    .logo { font-weight: 700; letter-spacing: 0.4px; color: var(--accent); }
 
-        .page-header {
-            text-align: center;
-            margin-bottom: 1rem;
-            padding-bottom: 1rem;
-        }
+    h1 { margin: 0.5rem 0; font-size: clamp(1.8rem, 2.6vw, 2.5rem); }
+    p.lede { margin: 0.3rem 0 1.2rem; color: var(--muted); font-size: 1.05rem; }
 
-        .page-header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.5rem;
-            color: var(--text-color);
-            margin-bottom: 1rem;
-        }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem 3rem; }
 
-        .page-header p, .page-header ul {
-            font-size: 1.1rem;
-            color: var(--light-text-color);
-            max-width: 750px;
-            margin: 1rem auto;
-            text-align: left;
-        }
-        
-        .page-header ul {
-            list-style-position: inside;
-            padding-left: 0;
-        }
-        
-        hr {
-            border: 0;
-            height: 1px;
-            background-color: var(--border-color);
-            margin: 2.5rem 0;
-        }
+    .surface {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 1.25rem;
+    }
 
-        /* --- Gemini Q&A Section --- */
-        .gemini-qa-section {
-            background-color: var(--gemini-bg);
-            border: 1px solid var(--gemini-border);
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 2rem 0;
-        }
+    .toolbar { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
 
-        .gemini-qa-section h2 {
-            font-family: 'Montserrat', sans-serif;
-            text-align: center;
-            margin-top: 0;
-            color: var(--primary-color);
-        }
+    .search-box {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 0.75rem 1rem;
+    }
 
-        #aiQuestion {
-            width: 100%;
-            padding: 1rem;
-            font-size: 1rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            min-height: 80px;
-            resize: vertical;
-            margin-bottom: 1rem;
-        }
+    .search-box input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 1rem;
+      width: 100%;
+      color: var(--text);
+    }
 
-        #askAiButton {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 1rem;
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: #fff;
-            background-color: var(--primary-color);
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        #askAiButton:hover {
-            background-color: #0056b3;
-        }
+    .pill {
+      background: #eef2ff;
+      color: #4338ca;
+      border-radius: 999px;
+      padding: 0.55rem 0.9rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 1px solid #e0e7ff;
+    }
 
-        #askAiButton .spinner {
-            display: none;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top-color: #fff;
-            width: 20px;
-            height: 20px;
-            animation: spin 1s ease-in-out infinite;
-            margin-right: 10px;
-        }
+    .grid { margin-top: 1.25rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; }
 
-        #aiAnswerContainer {
-            margin-top: 1.5rem;
-            padding: 1.5rem;
-            background-color: #fff;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            display: none;
-            white-space: pre-wrap;
-            line-height: 1.8;
-        }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem 1.1rem;
+      background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
 
-        .content-section h2 {
-            font-family: 'Montserrat', sans-serif;
-            margin-bottom: 1rem;
-        }
-        
-        .content-section p {
-             max-width: 100%;
-             margin-bottom: 1rem;
-        }
+    .card:hover { transform: translateY(-3px); border-color: #cbd5e1; box-shadow: 0 15px 30px rgba(0,0,0,0.06); }
 
-        /* --- Search Box --- */
-        .search-container {
-            position: relative;
-            margin-top: 2rem;
-            margin-bottom: 2.5rem;
-        }
+    .card h3 { margin: 0; font-size: 1.05rem; }
+    .card small { color: var(--muted); }
 
-        #searchInput {
-            width: 100%;
-            padding: 1rem 1rem 1rem 3rem;
-            font-size: 1rem;
-            border: 1px solid var(--border-color);
-            border-radius: 50px;
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
+    .empty { text-align: center; color: var(--muted); padding: 2rem 1rem; }
 
-        #searchInput:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
-        }
-
-        .search-container .fa-search {
-            position: absolute;
-            top: 50%;
-            left: 1.2rem;
-            transform: translateY(-50%);
-            color: var(--light-text-color);
-        }
-
-        /* --- Simplified Article List --- */
-        #articleList {
-            background-color: var(--card-bg-color);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            overflow: hidden; /* To keep border-radius */
-        }
-        
-        .article-item {
-            display: block;
-            padding: 1rem 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-            text-decoration: none;
-            color: var(--text-color);
-            transition: background-color 0.2s;
-        }
-        
-        .article-item:last-child {
-            border-bottom: none;
-        }
-
-        .article-item:hover {
-            background-color: #f8f9fa;
-            color: var(--primary-color);
-        }
-        
-        .article-item h3 {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            font-size: 1.15rem;
-            font-weight: 600;
-        }
-
-        #noResultsMessage {
-            display: none;
-            text-align: center;
-            padding: 3rem;
-            color: var(--light-text-color);
-            font-style: italic;
-        }
-
-        .page-footer {
-            text-align: center;
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border-color);
-            font-size: 0.9rem;
-            color: var(--light-text-color);
-        }
-        
-        @keyframes spin {
-          to {
-            transform: rotate(360deg);
-          }
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1.5rem;
-            }
-            .page-header h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    .footer { text-align: center; color: var(--muted); font-size: 0.95rem; padding: 2rem 0; }
+    .footer a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  </style>
 </head>
 <body>
+  <header>
+    <div class="logo">mtim.ruqyahbd.org</div>
+    <h1>Ruqyah Notes & Articles Archive</h1>
+    <p class="lede">Search and read every Markdown file in this repository directly from this site—no external wiki links.</p>
+  </header>
 
-    <div class="container">
-        <header class="page-header">
-            <h1>Muhammad Tim Humble's Ruqyah Notes & Lectures Archive</h1>
-            <p>Alḥamdulillāh, we have managed to recover and organize many of Ustadh Muhammad Tim Humble’s lectures and notes, especially those previously available on his websites.</p>
-        </header>
-        <main>
-            <div class="content-section">
-                <hr />
-                <h3>⚠️ Important Note & Disclaimer</h2>
-                <p>This is an unofficial archive created solely for educational and preservation purposes. All content in the articles belongs to its original author, Ustadh Muhammad Tim Humble. May Allah reward him immensely for his service to the Ummah.<br/>
-Please note that many internal links in the original articles may be broken. Additionally, any AI-generated summaries or explanations are intended for general informational purposes only and should not replace consultation with a qualified scholar or Raqi. We encourage you to read the original articles thoroughly to obtain accurate information.
-                </p>
-                <hr/>
-            </div>
-            
-        <h2>✨ List of All Articles and Pages</h2>
-            <div class="search-container">
-                <i class="fas fa-search"></i>
-                <input type="text" id="searchInput" placeholder="Search articles by title or keyword...">
-            </div>
+  <main class="container">
+    <section class="surface">
+      <div class="toolbar">
+        <div class="search-box">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input id="search" type="search" placeholder="Search by title or topic..." aria-label="Search articles" autocomplete="off" />
+        </div>
+        <div class="pill" id="count">Loading articles…</div>
+      </div>
 
-            <div id="articleList"></div>
-            
-            <div id="noResultsMessage">
-                <p>No articles found matching your search. Try another keyword!</p>
-            </div>
-        </main>
-      
-            <hr />        
-            <section class="gemini-qa-section">
-                <h2>🔍 Search inside articles (with GSE)</h2>
-               <script async src="https://cse.google.com/cse.js?cx=35d004f8610e745fc">
-                </script>
-                <div class="gcse-search"></div>
-            </section>
-        <hr />
-        
-         <section class="gemini-qa-section">
-            <h2>✨ Ask a Question about Ruqyah (from Gemini Ai)</h2>
-                <textarea id="aiQuestion" placeholder="e.g., What are the signs of the evil eye? How do I perform ruqyah on myself?"></textarea>
-                <button id="askAiButton">
-                    <span class="spinner"></span>
-                    <span class="button-text">Get an Answer with AI</span>
-                </button>
-                <div id="aiAnswerContainer"></div>
-        </section>
+      <div id="articles" class="grid" aria-live="polite"></div>
+      <div id="empty" class="empty" hidden>No articles matched your search.</div>
+    </section>
 
-        <footer class="page-footer">
-            <p>©️ <strong>Contribute on the Project @ </strong> <a href="https://github.com/ruqyahbd/mtim" target="_blank" rel="noopener noreferrer">Github Repo</a></p>
-            <p>🔗 <strong>Project maintained by:</strong> <a href="https://facebook.com/groups/ruqyahbd" target="_blank" rel="noopener noreferrer">Ruqyah Support BD Team</a></p>
-        </footer>
-    </div>
+    <section class="surface" aria-labelledby="how-it-works" style="margin-top: 1rem;">
+      <h2 id="how-it-works">How does this page work?</h2>
+      <p class="lede" style="margin-top: 0.35rem;">This page is built entirely from the Markdown files in this repository.</p>
+      <ul style="color: var(--muted); line-height: 1.7; padding-left: 1.1rem; margin: 0.2rem 0 0;">
+        <li>Jekyll scans the repo for every <code>.md</code> file (except <code>README.md</code>) and injects them into the page at build time.</li>
+        <li>The search box filters that list instantly by title or filename—no external data sources or wiki pages.</li>
+        <li>Click any card to open the Markdown directly from this repo in the built-in reader.</li>
+      </ul>
+      <p class="lede" style="margin-top: 0.9rem;">If you see an empty list locally, run Jekyll (<code>bundle exec jekyll serve</code>) or publish to GitHub Pages so the page can index the files.</p>
+    </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const articlesData = [
-                { title: "Sites' Homepage", url: "https://github.com/ruqyahbd/mtim/wiki", tags: ['Homepage', 'Index'] },
-                { title: "Notes index", url: "https://github.com/ruqyahbd/mtim/wiki/Notes-index", tags: ['Notes', 'Index'] },
-                { title: "7 Day Ruqyah Detox Programme", url: "https://github.com/ruqyahbd/mtim/wiki/7-Day-Ruqyah-Detox-Program", tags: ['Ruqyah', 'Programme', 'Detox'] },
-                { title: "An Advice Regarding Sickness & Difficulty, Especially in Relation to Magic (part 1–8)", url: "https://github.com/ruqyahbd/mtim/wiki/An-Advice-Regarding-Sickness-&-Difficulty,-Especially-in-Relation-to-Magic-(part-1%E2%80%908)", tags: ['Advice', 'Magic', 'Sickness'] },
-                { title: "An Update From Dubai", url: "https://github.com/ruqyahbd/mtim/wiki/An-Update-From-Dubai", tags: ['Update', 'Personal'] },
-                { title: "Closing Windows and Doors at Night", url: "https://github.com/ruqyahbd/mtim/wiki/Closing-Windows-and-Doors-at-Night", tags: ['Protection', 'Sunnah'] },
-                { title: "Confusion Over How to Seek Blessings for Someone to Prevent the Evil Eye", url: "https://github.com/ruqyahbd/mtim/wiki/Confusion-Over-How-to-Seek-Blessings-for-Someone-to-Prevent-the-Evil-Eye", tags: ['Evil Eye', 'Blessings'] },
-                { title: "Contact Muhammad Tim Humble", url: "https://github.com/ruqyahbd/mtim/wiki/Contact-Muhammad-Tim-Humble", tags: ['Contact', 'Info'] },
-                { title: "Dealing with Waswasah", url: "https://github.com/ruqyahbd/mtim/wiki/Dealing-with-Waswasah", tags: ['Waswasah', 'Advice'] },
-                { title: "Frequent Nightmares", url: "https://github.com/ruqyahbd/mtim/wiki/Frequent-Nightmares", tags: ['Nightmares', 'Jinn'] },
-                { title: "How Can I Protect Myself?", url: "https://github.com/ruqyahbd/mtim/wiki/How-Can-I-Protect-Myself%3F", tags: ['Protection', 'Ruqyah'] },
-                { title: "How Do I Destroy a Ta'weez?", url: "https://github.com/ruqyahbd/mtim/wiki/How-Do-I-Destroy-a-Ta'weez%3F", tags: ['Taweez', 'Amulets'] },
-                { title: "How Do I Know That My Treatment is Complete?", url: "https://github.com/ruqyahbd/mtim/wiki/How-Do-I-Know-That-My-Treatment-is-Complete%3F", tags: ['Treatment', 'Ruqyah'] },
-                { title: "How Do I Study Islam?", url: "https://github.com/ruqyahbd/mtim/wiki/How-Do-I-Study-Islam%3F", tags: ['Knowledge', 'Study'] },
-                { title: "How to Control Violent Jinn", url: "https://github.com/ruqyahbd/mtim/wiki/How-to-Control-Violent-Jinn", tags: ['Jinn', 'Ruqyah'] },
-                { title: "How to Overcome Addiction to Pornography (and Related Addictions)", url: "https://github.com/ruqyahbd/mtim/wiki/How-to-Overcome-Addiction-to-Pornography-(and-Related-Addictions)", tags: ['Addiction', 'Advice'] },
-                { title: "I'm Leaving the UK for a While (and Why)", url: "https://github.com/ruqyahbd/mtim/wiki/I'm-Leaving-the-UK-for-a-While-(and-Why)", tags: ['Personal', 'Update'] },
-                { title: "If a Patient Refuses Treatment", url: "https://github.com/ruqyahbd/mtim/wiki/If-a-Patient-Refuses-Treatment", tags: ['Patient', 'Treatment'] },
-                { title: "If I only do one thing…", url: "https://github.com/ruqyahbd/mtim/wiki/If-I-only-do-one-thing…", tags: ['Advice', 'Reminder'] },
-                { title: "Information for Ruqyah Patients", url: "https://github.com/ruqyahbd/mtim/wiki/Information-for-Ruqyah-Patients", tags: ['Ruqyah', 'Patient', 'Info'] },
-                { title: "Jinn Attacks and Assault at Night", url: "https://github.com/ruqyahbd/mtim/wiki/Jinn-Attacks-and-Assault-at-Night", tags: ['Jinn', 'Attack'] },
-                { title: "Magic and the Stomach", url: "https://github.com/ruqyahbd/mtim/wiki/Magic-and-the-Stomach", tags: ['Magic', 'Sihr', 'Stomach'] },
-                { title: "Muhammad Tim Humble's blog (blank)", url: "https://github.com/ruqyahbd/mtim/wiki/Muhammad-Tim-Humble's-blog-(blank)", tags: ['Archive'] },
-                { title: "Muhammad Tim Humble's Charity Recommendations", url: "https://github.com/ruqyahbd/mtim/wiki/Muhammad-Tim-Humble's-Charity-Recommendations", tags: ['Charity', 'Sadaqa'] },
-                { title: "Muhammad Tim Humble's Video Lectures", url: "https://github.com/ruqyahbd/mtim/wiki/Muhammad-Tim-Humble's-Video-Lectures", tags: ['Lectures', 'Video'] },
-                { title: "Note: Islam: The Misunderstood Religion (Lectures for non‐Muslims)", url: "https://github.com/ruqyahbd/mtim/wiki/Note:--Islam:-The-Misunderstood-Religion--(Lectures-for-non%E2%80%90Muslims)", tags: ['Notes', 'Dawah', 'Non-Muslims'] },
-                { title: "Note: Amulets & Talismans", url: "https://github.com/ruqyahbd/mtim/wiki/Note:-Amulets-&-Talismans", tags: ['Notes', 'Amulets', 'Taweez'] },
-                { title: "Note: An Introduction to Ruqyah", url: "https://github.com/ruqyahbd/mtim/wiki/Note:-An-Introduction-to-Ruqyah", tags: ['Notes', 'Ruqyah', 'Introduction'] },
-                { title: "Note: Fortune Telling & Astrology", url: "https://github.com/ruqyahbd/mtim/wiki/Note:-Fortune-Telling-&-Astrology", tags: ['Notes', 'Astrology', 'Shirk'] },
-                { title: "Note: Introduction (to ruqyah and teacher)", url: "https://github.com/ruqyahbd/mtim/wiki/Note:-Introduction-(to-ruqyah-and-teacher)", tags: ['Notes', 'Introduction'] },
-                { title: "Note: Magic & The Magician", url: "https://github.com/ruqyahbd/mtim/wiki/Note:-Magic-&-The-Magician", tags: ['Notes', 'Magic', 'Sihr'] },
-                { title: "Note: The Evil Eye", url: "https://github.com/ruqyahbd/mtim/wiki/Note:-The-Evil-Eye", tags: ['Notes', 'Evil Eye', 'Ayn'] },
-                { title: "Note: The Need and Virtue of Ruqyah", url: "https://github.com/ruqyahbd/mtim/wiki/Note:-The-Need-and-Virtue-of-Ruqyah", tags: ['Notes', 'Ruqyah', 'Virtue'] },
-                { title: "Note: The Qur'an as a Cure", url: "https://github.com/ruqyahbd/mtim/wiki/Note:-The-Qur'an-as-a-Cure", tags: ['Notes', 'Quran', 'Cure'] },
-                { title: "Note: The Raaqi & His Family", url: "https://github.com/ruqyahbd/mtim/wiki/Note:-The-Raaqi-&-His-Family", tags: ['Notes', 'Raaqi', 'Family'] },
-                { title: "Note: The Ruqya Session", url: "https://github.com/ruqyahbd/mtim/wiki/Note:-The-Ruqya-Session", tags: ['Notes', 'Ruqyah', 'Session'] },
-                { title: "Note: The World of the Jinn", url: "https://github.com/ruqyahbd/mtim/wiki/Note:-The-World-of-the-Jinn", tags: ['Notes', 'Jinn'] },
-                { title: "Note: A Simple Guide to self Ruqyah", url: "https://github.com/ruqyahbd/mtim/wiki/Note:-A-Simple-Guide-to-self-Ruqyah", tags: ['Self Ruqyah', 'Ruqyah', 'Guide'] },
-                { title: "Notes, Texts, and Audio for The Essentials Course", url: "https://github.com/ruqyahbd/mtim/wiki/Notes,-Texts,-and-Audio-for-The-Essentials-Course", tags: ['Notes', 'Course'] },
-                { title: "O Nouman Ali Khan…Fear Allāh!", url: "https://github.com/ruqyahbd/mtim/wiki/O-Nouman-Ali-Khan…Fear-All%C4%81h!", tags: ['Refutation', 'Advice'] },
-                { title: "Psoriasis, Eczema, and Prophetic Medicine", url: "https://github.com/ruqyahbd/mtim/wiki/Psoriasis,-Eczema,-and-Prophetic-Medicine", tags: ['Medicine', 'Health'] },
-                { title: "Response to Those Who Defend Ta'weez", url: "https://github.com/ruqyahbd/mtim/wiki/Response-to-Those-Who-Defend-Ta'weez", tags: ['Taweez', 'Refutation'] },
-                { title: "Ruqyah Audio", url: "https://github.com/ruqyahbd/mtim/wiki/Ruqyah-Audio", tags: ['Ruqyah', 'Audio'] },
-                { title: "Ruqyah Clinics", url: "https://github.com/ruqyahbd/mtim/wiki/Ruqyah-Clinics", tags: ['Ruqyah', 'Clinics'] },
-                { title: "Ruqyah for Children", url: "https://github.com/ruqyahbd/mtim/wiki/Ruqyah-for-Children", tags: ['Ruqyah', 'Children'] },
-                { title: "Ruqyah for Non‐Muslims", url: "https://github.com/ruqyahbd/mtim/wiki/Ruqyah-for-Non%E2%80%90Muslims", tags: ['Ruqyah', 'Dawah'] },
-                { title: "Ruqyah in the Bradford Area", url: "https://github.com/ruqyahbd/mtim/wiki/Ruqyah-in-the-Bradford-Area", tags: ['Ruqyah', 'Location'] },
-                { title: "Ruqyah Programme for Patients", url: "https://github.com/ruqyahbd/mtim/wiki/Ruqyah-Programme-for-Patients", tags: ['Ruqyah', 'Programme'] },
-                { title: "Simple Things to Protect Yourself from the Shaytaan", url: "https://github.com/ruqyahbd/mtim/wiki/Simple-Things-to-Protect-Yourself-from-the-Shaytaan", tags: ['Protection', 'Shaytaan'] },
-                { title: "Solving the Email Problem", url: "https://github.com/ruqyahbd/mtim/wiki/Solving-the-Email-Problem", tags: ['Personal', 'Update'] },
-                { title: "Success in Secular Studies", url: "https://github.com/ruqyahbd/mtim/wiki/Success-in-Secular-Studies", tags: ['Success', 'Study'] },
-                { title: "Travelling for Ruqyah", url: "https://github.com/ruqyahbd/mtim/wiki/Travelling-for-Ruqyah", tags: ['Ruqyah', 'Travel'] },
-                { title: "Trying for a Baby Without Success", url: "https://github.com/ruqyahbd/mtim/wiki/Trying-for-a-Baby-Without-Success", tags: ['Family', 'Advice'] },
-                { title: "Using Truffle Water", url: "https://github.com/ruqyahbd/mtim/wiki/Using-Truffle-Water", tags: ['Medicine', 'Sunnah'] },
-                { title: "Video Lectures", url: "https://github.com/ruqyahbd/mtim/wiki/Video-Lectures", tags: ['Lectures', 'Video'] },
-                { title: "Where Do I Start?", url: "https://github.com/ruqyahbd/mtim/wiki/Where-Do-I-Start%3F", tags: ['Guidance', 'Start'] },
-                { title: "Who Cares About the Truth!?", url: "https://github.com/ruqyahbd/mtim/wiki/Who-Cares-About-the-Truth!%3F", tags: ['Reminder', 'Truth'] },
-                { title: "Why Is My Treatment Taking So Long?", url: "https://github.com/ruqyahbd/mtim/wiki/Why-Is-My-Treatment-Taking-So-Long%3F", tags: ['Treatment', 'Ruqyah', 'Advice'] },
-            ];
+    <div class="footer">Built for easier access to the archive. <a href="https://github.com/ruqyahbd/mtim">View on GitHub</a>.</div>
+  </main>
 
-            const articleListContainer = document.getElementById('articleList');
-            
-            function renderArticles(articlesToRender) {
-                articleListContainer.innerHTML = '';
-                if (articlesToRender.length === 0) return;
+  <script>
+    // Build-time list of repository markdown files (no external wiki links)
+    const ARTICLE_INDEX = [
+      {% assign md_files = site.static_files | where_exp: "file", "file.extname == '.md'" %}
+      {% assign filtered = md_files | where_exp: "file", "file.name != 'README.md'" %}
+      {% for file in filtered %}
+        {% capture pretty_title %}{{ file.name | remove: '.md' | replace: '-', ' ' | replace: '_', ' ' | strip }}{% endcapture %}
+        {
+          title: {{ pretty_title | strip_newlines | jsonify }},
+          basename: {{ file.name | jsonify }},
+          path: {{ file.path | jsonify }},
+          url: {{ file.path | relative_url | jsonify }}
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ];
 
-                articlesToRender.forEach(articleData => {
-                    const link = document.createElement('a');
-                    link.href = articleData.url;
-                    link.className = 'article-item';
-                    link.target = '_blank';
-                    link.rel = 'noopener noreferrer';
+    const articlesContainer = document.getElementById('articles');
+    const countPill = document.getElementById('count');
+    const emptyState = document.getElementById('empty');
+    const searchInput = document.getElementById('search');
+    let articles = [];
 
-                    const title = document.createElement('h3');
-                    title.textContent = articleData.title;
-                    
-                    link.appendChild(title);
-                    articleListContainer.appendChild(link);
-                });
-            }
-            
-            renderArticles(articlesData);
+    function renderArticles(list) {
+      articlesContainer.innerHTML = '';
+      list.forEach((article) => {
+        const link = document.createElement('a');
+        link.className = 'card';
+        link.href = `reader.html?path=${encodeURIComponent(article.url)}`;
+        link.setAttribute('data-title', article.title.toLowerCase());
+        link.innerHTML = `<h3>${article.title}</h3><small>${article.basename}</small>`;
+        articlesContainer.appendChild(link);
+      });
+      emptyState.hidden = list.length !== 0;
+      articlesContainer.hidden = list.length === 0;
+      countPill.textContent = `${list.length} article${list.length === 1 ? '' : 's'}`;
+    }
 
-            const searchInput = document.getElementById('searchInput');
-            const noResultsMessage = document.getElementById('noResultsMessage');
+    function filterArticles(query) {
+      const term = query.trim().toLowerCase();
+      if (!term) {
+        renderArticles(articles);
+        return;
+      }
+      const filtered = articles.filter((article) =>
+        article.searchable.includes(term)
+      );
+      renderArticles(filtered);
+    }
 
-            searchInput.addEventListener('keyup', (event) => {
-                const searchQuery = event.target.value.toLowerCase().trim();
-                const filteredArticles = articlesData.filter(article => {
-                    const title = article.title.toLowerCase();
-                    const tags = article.tags.join(' ').toLowerCase();
-                    return (title + ' ' + tags).includes(searchQuery);
-                });
-                renderArticles(filteredArticles);
-                noResultsMessage.style.display = filteredArticles.length === 0 && searchQuery.length > 0 ? 'block' : 'none';
-                articleListContainer.style.display = filteredArticles.length > 0 ? 'block' : 'none';
-            });
+    function loadArticles() {
+      articles = ARTICLE_INDEX.map((item) => ({
+        ...item,
+        searchable: `${item.title} ${item.basename}`.toLowerCase(),
+      })).sort((a, b) => a.title.localeCompare(b.title));
+      renderArticles(articles);
+    }
 
-            // --- Gemini API Integration ---
-            const askAiButton = document.getElementById('askAiButton');
-            const aiQuestionInput = document.getElementById('aiQuestion');
-            const aiAnswerContainer = document.getElementById('aiAnswerContainer');
-            const spinner = askAiButton.querySelector('.spinner');
-            const buttonText = askAiButton.querySelector('.button-text');
-
-            askAiButton.addEventListener('click', async () => {
-                const question = aiQuestionInput.value.trim();
-                if (!question) {
-                    aiAnswerContainer.style.display = 'block';
-                    aiAnswerContainer.textContent = 'Please enter a question first.';
-                    return;
-                }
-
-                spinner.style.display = 'inline-block';
-                buttonText.textContent = 'Getting Answer...';
-                askAiButton.disabled = true;
-                aiAnswerContainer.style.display = 'none';
-
-                try {
-                    // This now calls your secure backend function
-                    const response = await fetch('/api/ask', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ question: question })
-                    });
-
-                    if (!response.ok) {
-                        throw new Error(`Server error: ${response.statusText}`);
-                    }
-
-                    const result = await response.json();
-                    aiAnswerContainer.textContent = result.answer;
-                    aiAnswerContainer.style.display = 'block';
-
-                } catch (error) {
-                    console.error("Error calling backend function:", error);
-                    aiAnswerContainer.textContent = 'An error occurred. Please check the console and try again.';
-                    aiAnswerContainer.style.display = 'block';
-                } finally {
-                    spinner.style.display = 'none';
-                    buttonText.textContent = 'Get an Answer with AI';
-                    askAiButton.disabled = false;
-                }
-            });
-        });
-    </script>
-
+    searchInput.addEventListener('input', (event) => filterArticles(event.target.value));
+    loadArticles();
+  </script>
 </body>
 </html>
