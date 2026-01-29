@@ -1,11 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Search, ChevronRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, ChevronRight, ChevronDown, ChevronUp } from 'lucide-react';
+import { marked } from 'marked';
 import posts from '../data/posts.json';
 
 const Home = () => {
     const [searchTerm, setSearchTerm] = useState('');
+    const [oldHomeContent, setOldHomeContent] = useState('');
+    const [isOldHomeExpanded, setIsOldHomeExpanded] = useState(true);
+
+    useEffect(() => {
+        const fetchOldHome = async () => {
+            try {
+                const response = await fetch('/Home.md?t=' + Date.now());
+                if (!response.ok) throw new Error('Failed to fetch');
+                let text = await response.text();
+                // Remove metadata blocks [key: val]:/
+                text = text.replace(/^\[.*\](?::\/)?\s*$/gm, '').trim();
+                setOldHomeContent(marked(text));
+            } catch (err) {
+                console.error("Error loading old home content:", err);
+            }
+        };
+        fetchOldHome();
+    }, []);
 
     const filteredPosts = posts.filter(post =>
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -17,6 +36,60 @@ const Home = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
         >
+            {oldHomeContent && (
+                <div style={{
+                    marginBottom: '2rem',
+                    border: '1px solid var(--border)',
+                    borderRadius: '0.75rem',
+                    overflow: 'hidden',
+                    backgroundColor: 'var(--card-bg)'
+                }}>
+                    <button
+                        onClick={() => setIsOldHomeExpanded(!isOldHomeExpanded)}
+                        style={{
+                            width: '100%',
+                            padding: '1rem 1.5rem',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'space-between',
+                            background: 'none',
+                            border: 'none',
+                            cursor: 'pointer',
+                            color: 'var(--text)',
+                            fontWeight: '600',
+                            fontSize: '1rem',
+                            textAlign: 'left'
+                        }}
+                    >
+                        <span>Introduction & Popular Resources</span>
+                        {isOldHomeExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                    </button>
+                    <AnimatePresence>
+                        {isOldHomeExpanded && (
+                            <motion.div
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: 'auto', opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                                style={{ overflow: 'hidden' }}
+                            >
+                                <div
+                                    className="markdown"
+                                    style={{
+                                        padding: '0 1.5rem 1.5rem 1.5rem',
+                                        fontSize: '0.95rem',
+                                        lineHeight: '1.6',
+                                        borderTop: '1px solid var(--border)',
+                                        marginTop: '0'
+                                    }}
+                                    dangerouslySetInnerHTML={{ __html: oldHomeContent }}
+                                />
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
+                </div>
+            )}
+
             <section style={{ marginBottom: '3rem' }}>
                 <h1 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '0.75rem' }}>Article Archive</h1>
                 <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', marginBottom: '2rem' }}>

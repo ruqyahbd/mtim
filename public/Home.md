@@ -1,7 +1,3 @@
-[title: Muhammad Tim Humble - muhammadtim.com]:/
-[menu: Home]:/
-[menu-locgroup: primary]:/
-[order: 1]:/
 
 # Muhammad Tim Humble - muhammadtim.com
 
@@ -31,16 +27,5 @@ Please also check out the [notes section](https://mtim.ruqyahbd.org/post/Notes-i
 
 There's also a selection of [video lectures](https://mtim.ruqyahbd.org/post/Muhammad-Tim-Humble's-Video-Lectures), and you can [contact me](https://mtim.ruqyahbd.org/post/Contact-Muhammad-Tim-Humble).
 
-Finally, here is a selection of the last few blog posts, see the full [blog](https://github.com/ruqyahbd/mtim?tab=readme-ov-file#-list-of-all-articles-and-pages) for more:
-
-
-***
-
-<ul data-lift="blog.posts?max=3" style="list-style-type: none;">
-    <li data-post="item">
-        <h2><a data-post="link" href="#">Blog Post</a></h2>
-        <div data-post="shortcontent">Post Content goes here</div>
-        <div data-post="more"><a href="#">Read More...</a></div>
-				<hr/>
-    </li>
-</ul>
+---
+Finally, here is a selection of the last few blog posts, see the full blog or search with post title for more:
