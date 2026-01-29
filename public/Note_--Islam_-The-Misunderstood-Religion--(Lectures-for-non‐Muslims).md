@@ -8,7 +8,7 @@
 <p><a href="https://github.com/ruqyahbd/mtim/wiki/Notes-index">[Back to Notes Index]</a></p>
 </div>
 
-# Islam: The Misunderstood Religion (Sunderland Uni) Lecture fo Non Muslims
+# Islam: The Misunderstood Religion (Sunderland Uni) Lecture for Non Muslims
 <sup>Version 1.0</sup>
 
 
