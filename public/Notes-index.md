@@ -1,3 +1,5 @@
+[template: notes]:/
+[title: Notes from Muhammad Tim's Lectures]:/
 
 ## Ruqyah, the Jinn, Magic, the Evil Eye, and Related Topics
 
