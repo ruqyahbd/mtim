@@ -1,5 +1,5 @@
 [template: notes]:/
-[title: Islam: The Misunderstood Religion (Sunderland Uni) - Notes from Muhammad Tim's Lectures]:/
+[title: Islam: The Misunderstood Religion - Notes from Muhammad Tim's Lectures]:/
 [menu: Islam: The Misunderstood Religion (Sunderland Uni)]:/
 [menu-locgroup: general]:/
 [order: 1]:/
@@ -8,7 +8,7 @@
 <p><a href="https://github.com/ruqyahbd/mtim/wiki/Notes-index">[Back to Notes Index]</a></p>
 </div>
 
-# Islam: The Misunderstood Religion
+# Islam: The Misunderstood Religion (Sunderland Uni) Lecture fo Non Muslims
 <sup>Version 1.0</sup>
 
 
