@@ -1,9 +1,7 @@
 [template: notes]:/
 [title: Notes from Muhammad Tim's Lectures]:/
 
-# Notes from Muhammad Tim's Lectures
-
-## Ruqyah, the Jinn, Magic, the Evil Eye, and Related Topics
+## Ruqyah, and the Jinn, Magic, the Evil Eye, and Related Topics
 
 ### Jinn & Black Magic - One Day Seminar
 
