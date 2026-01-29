@@ -1,5 +1,8 @@
 # Muhammad Tim Humble's Ruqyah Notes & Lectures Archive
 
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fmtim.ruqyahbd.org%2F)
+**Visit the Archive** 👉 [mtim.ruqyahbd.org](https://mtim.ruqyahbd.org)
+
 Alḥamdulillāh, we have managed to recover and organize many of Ustadh Muhammad Tim Humble’s lectures and notes, especially those previously available on his websites:
 
 - 🌐 mohammadtim.com ([archive link](https://web.archive.org/web/20240518103905/https://muhammadtim.com/))  
@@ -19,18 +22,6 @@ As these websites have been offline for quite some time, many of us have deeply 
 
 ---
 
-## ⚠️ Important Note
-
-Some of the internal links within these articles originally pointed to other posts on the same site. As those sites are down, many of those links may currently lead to 404 errors. However, we are gradually working to locate and relink those contents properly within this archive. Please be patient and feel free to [contribute](https://github.com/ruqyahbd/mtim/issues) if you find any missing or broken references.
-
----
-
-## 📝 Disclaimer
-
-This is an unofficial archive created for educational and preservation purposes only. All content belongs to its respective author, Ustadh Muhammad Tim Humble. May Allah reward him immensely for his service to the Ummah.
-
----
-
 ## 🌐 Access the Archive
 
 The full archive with search and filtering capabilities is available at:
@@ -43,6 +34,19 @@ We recommend using the website for the best reading experience, as it includes:
 - 🌓 **Dark Mode** support
 - 🇧🇩 **Bengali Translation** toggle
 - 📱 **Mobile-friendly** interface
+
+---
+
+## ⚠️ Important Note
+
+Some of the internal links within these articles originally pointed to other posts on the same site. As those sites are down, many of those links may currently lead to 404 errors. However, we are gradually working to locate and relink those contents properly within this archive. Please be patient and feel free to [contribute](https://github.com/ruqyahbd/mtim/issues) if you find any missing or broken references.
+
+---
+
+## 📝 Disclaimer
+
+This is an unofficial archive created for educational and preservation purposes only. All content belongs to its respective author, Ustadh Muhammad Tim Humble. May Allah reward him immensely for his service to the Ummah.
+
 
 ---
 
