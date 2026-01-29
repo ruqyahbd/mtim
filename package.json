@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run generate-index && vite build",
     "preview": "vite preview",
     "generate-index": "node scripts/generate-posts-index.js"
   },
