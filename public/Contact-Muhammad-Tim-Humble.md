@@ -8,7 +8,7 @@
 
 **Please read this carefully**
 
-For several years, I have been struggling with the volume of emails that I receive each day. I have made several changes in order to make this easier, the latest of which is described [here](https://github.com/ruqyahbd/mtim/wiki/Solving-the-Email-Problem) - however, even with those changes, so many of my most important projects have become delayed - most are several months behind schedule.
+For several years, I have been struggling with the volume of emails that I receive each day. I have made several changes in order to make this easier, the latest of which is described [here](https://mtim.ruqyahbd.org/post/Solving-the-Email-Problem) - however, even with those changes, so many of my most important projects have become delayed - most are several months behind schedule.
 
 In order to reverse this trend, with the help of Allāh, I have made the difficult decision to take a break from responding to emails and messages for the next three months, until the 17th September 2016. During this time, I will be working hard to get the projects related to the [Humble Foundation](www.humblefoundation.org), and [my website](www.muhammadtim.com) back on track, in shā’ Allāh.
 

@@ -1,1 +1,0 @@
-🔗 **Project maintained by:** [Ruqyah Support BD Team](https://facebook.com/groups/ruqyahbd)

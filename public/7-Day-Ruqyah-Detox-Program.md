@@ -45,7 +45,7 @@ At the beginning of the week, you need to do the following:
 
 1. Sit down with the water and olive oil open in front of you. Read the following:
 
- - [**al-Faatihah**](http://quran.com/1) - seven times is best, or three if you wish, because the Prophet ﷺ [approved of doing so](https://github.com/ruqyahbd/mtim/wiki/Note:-The-Qur'an-as-a-Cure).
+ - [**al-Faatihah**](http://quran.com/1) - seven times is best, or three if you wish, because the Prophet ﷺ [approved of doing so](https://mtim.ruqyahbd.org/post/Note_-The-Qur'an-as-a-Cure).
  - [**al-Baqarah**](http://quran.com/2) - once all the way through (If you are unable to read al-Baqarah, then read whatever is easy for you, or ask someone to read for you, if you struggle to read the Qur'an).
  - **The last three surahs of the Qur'an: [al-Ikhlaaṣ](http://quran.com/112), [al-Falaq](http://quran.com/113), and [an-Naas](http://quran.com/114)** - three times each.
  - **Aayat-ul-Kursi** [2:255](http://quran.com/2/255) - seven times is best, or three if you wish.
@@ -71,4 +71,4 @@ At the beginning of the week, you need to do the following:
 2. On the second and third day, you may feel very ill. You may feel excessive tiredness, pain all over the body, or in certain places, or aches and pains as though you carried out strenuous exercise.
 3. By the fourth day, you may feel completely refreshed, as though you have a lot of energy - with the permission of Allah.
 4. The aches and pains will gradually go away, in shaa' Allah, over the course of the 7 days.
-5. {If the patient does not feel better, or the 7 day programme has resulted in a worsening of symptoms, then we advise to move on to the [full ruqyah programme](https://github.com/ruqyahbd/mtim/wiki/Ruqyah-Programme-for-Patients), of which the 7 day programme is repeated 1-2 times a month, in addition to other ruqyah.}
+5. {If the patient does not feel better, or the 7 day programme has resulted in a worsening of symptoms, then we advise to move on to the [full ruqyah programme](https://mtim.ruqyahbd.org/post/Ruqyah-Programme-for-Patients), of which the 7 day programme is repeated 1-2 times a month, in addition to other ruqyah.}

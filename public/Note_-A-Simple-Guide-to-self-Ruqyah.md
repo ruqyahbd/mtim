@@ -364,7 +364,7 @@ In-book reference : Book 39, Hadith 54
     Ibn Mas’ud said, “The Tahweez are haraam from the Quran and from anything other than the Quran.”  
     Allah Subhanahu wa Ta’ala says, “And they followed \[instead\] what the devils had recited during the reign of Solomon. It was not Solomon who disbelieved, but the devils disbelieved, teaching people magic and that which was revealed to the two angels at Babylon, Harut and Marut. But the two angels do not teach anyone unless they say, “We are a trial, so do not disbelieve \[by practicing magic\].” And \[yet\] they learn from them that by which they cause separation between a man and his wife. But they do not harm anyone through it except by permission of Allah . And the people learn what harms them and does not benefit them. But the Children of Israel certainly knew that whoever purchased the magic would not have in the Hereafter any share. And wretched is that for which they sold themselves, if they only knew.” \[Quran 2:102\]  
       
-    For more on the prohibition on Tahweez, please read: [Response to Those Who Defend Ta'weez](https://github.com/ruqyahbd/mtim/wiki/Response-to-Those-Who-Defend-Ta'weez)
+    For more on the prohibition on Tahweez, please read: [Response to Those Who Defend Ta'weez](https://mtim.ruqyahbd.org/post/Response-to-Those-Who-Defend-Ta'weez)
 5.  You are praying your 5 daily prayers
 
 **The next thing is to prepare the environment to do ruqyah in:**

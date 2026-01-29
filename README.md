@@ -31,74 +31,23 @@ This is an unofficial archive created for educational and preservation purposes 
 
 ---
 
-## ✨ List of All Articles and Pages
+## 🌐 Access the Archive
 
-You can access the list of articles and lecture notes from the [Wiki section of this repo](https://github.com/ruqyahbd/mtim/wiki), which includes:
+The full archive with search and filtering capabilities is available at:
 
-1.	[Sites' Homepage](https://github.com/ruqyahbd/mtim/wiki)
-2.	 [Notes index](https://github.com/ruqyahbd/mtim/wiki/Notes-index)
-3.	 [7 Day Ruqyah Detox Programme](https://github.com/ruqyahbd/mtim/wiki/7-Day-Ruqyah-Detox-Program)
-4.	 [An Advice Regarding Sickness & Difficulty, Especially in Relation to Magic (part 1–8)](https://github.com/ruqyahbd/mtim/wiki/An-Advice-Regarding-Sickness-&-Difficulty,-Especially-in-Relation-to-Magic-(part-1%E2%80%908))
-5.	 [An Update From Dubai](https://github.com/ruqyahbd/mtim/wiki/An-Update-From-Dubai)
-6.	 [Closing Windows and Doors at Night](https://github.com/ruqyahbd/mtim/wiki/Closing-Windows-and-Doors-at-Night)
-7.	 [Confusion Over How to Seek Blessings for Someone to Prevent the Evil Eye](https://github.com/ruqyahbd/mtim/wiki/Confusion-Over-How-to-Seek-Blessings-for-Someone-to-Prevent-the-Evil-Eye)
-8.	 [Contact Muhammad Tim Humble](https://github.com/ruqyahbd/mtim/wiki/Contact-Muhammad-Tim-Humble)
-9.	 [Dealing with Waswasah](https://github.com/ruqyahbd/mtim/wiki/Dealing-with-Waswasah)
-10.	 [Frequent Nightmares](https://github.com/ruqyahbd/mtim/wiki/Frequent-Nightmares)
-11.	 [How Can I Protect Myself?](https://github.com/ruqyahbd/mtim/wiki/How-Can-I-Protect-Myself%3F)
-12.	 [How Do I Destroy a Ta'weez?](https://github.com/ruqyahbd/mtim/wiki/How-Do-I-Destroy-a-Ta'weez%3F)
-13.	 [How Do I Know That My Treatment is Complete?](https://github.com/ruqyahbd/mtim/wiki/How-Do-I-Know-That-My-Treatment-is-Complete%3F)
-14.	 [How Do I Study Islam?](https://github.com/ruqyahbd/mtim/wiki/How-Do-I-Study-Islam%3F)
-15.	 [How to Control Violent Jinn](https://github.com/ruqyahbd/mtim/wiki/How-to-Control-Violent-Jinn)
-16.	 [How to Overcome Addiction to Pornography (and Related Addictions)](https://github.com/ruqyahbd/mtim/wiki/How-to-Overcome-Addiction-to-Pornography-(and-Related-Addictions))
-17.	 [I'm Leaving the UK for a While (and Why)](https://github.com/ruqyahbd/mtim/wiki/I'm-Leaving-the-UK-for-a-While-(and-Why))
-18.	 [If a Patient Refuses Treatment](https://github.com/ruqyahbd/mtim/wiki/If-a-Patient-Refuses-Treatment)
-19.	 [If I only do one thing...](https://github.com/ruqyahbd/mtim/wiki/If-I-only-do-one-thing...)
-20.	 [Information for Ruqyah Patients](https://github.com/ruqyahbd/mtim/wiki/Information-for-Ruqyah-Patients)
-21.	 [Jinn Attacks and Assault at Night](https://github.com/ruqyahbd/mtim/wiki/Jinn-Attacks-and-Assault-at-Night)
-22.	 [Magic and the Stomach](https://github.com/ruqyahbd/mtim/wiki/Magic-and-the-Stomach)
-23.	 [Muhammad Tim Humble's blog (blank)](https://github.com/ruqyahbd/mtim/wiki/Muhammad-Tim-Humble's-blog-(blank))
-24.	 [Muhammad Tim Humble's Charity Recommendations](https://github.com/ruqyahbd/mtim/wiki/Muhammad-Tim-Humble's-Charity-Recommendations)
-25.	 [Muhammad Tim Humble's Video Lectures](https://github.com/ruqyahbd/mtim/wiki/Muhammad-Tim-Humble's-Video-Lectures)
-26.	 [Note: Islam: The Misunderstood Religion (Lectures for non‐Muslims)](https://github.com/ruqyahbd/mtim/wiki/Note:--Islam:-The-Misunderstood-Religion--(Lectures-for-non%E2%80%90Muslims))
-27.	 [Note: Amulets & Talismans](https://github.com/ruqyahbd/mtim/wiki/Note:-Amulets-&-Talismans)
-28.	 [Note: An Introduction to Ruqyah](https://github.com/ruqyahbd/mtim/wiki/Note:-An-Introduction-to-Ruqyah)
-29.	 [Note: Fortune Telling & Astrology](https://github.com/ruqyahbd/mtim/wiki/Note:-Fortune-Telling-&-Astrology)
-30.	 [Note: Introduction (to ruqyah and teacher)](https://github.com/ruqyahbd/mtim/wiki/Note:-Introduction-(to-ruqyah-and-teacher))
-31.	 [Note: Magic & The Magician](https://github.com/ruqyahbd/mtim/wiki/Note:-Magic-&-The-Magician)
-32.	 [Note: The Evil Eye](https://github.com/ruqyahbd/mtim/wiki/Note:-The-Evil-Eye)
-33.	 [Note: The Need and Virtue of Ruqyah](https://github.com/ruqyahbd/mtim/wiki/Note:-The-Need-and-Virtue-of-Ruqyah)
-34.	 [Note: The Qur'an as a Cure](https://github.com/ruqyahbd/mtim/wiki/Note:-The-Qur'an-as-a-Cure)
-35.	 [Note: The Raaqi & His Family](https://github.com/ruqyahbd/mtim/wiki/Note:-The-Raaqi-&-His-Family)
-36.	 [Note: The Ruqya Session](https://github.com/ruqyahbd/mtim/wiki/Note:-The-Ruqya-Session)
-37.	 [Note: The World of the Jinn](https://github.com/ruqyahbd/mtim/wiki/Note:-The-World-of-the-Jinn)
-38.	 [Note: A Simple Guide to self Ruqyah](https://github.com/ruqyahbd/mtim/wiki/Note:-A-Simple-Guide-to-self-Ruqyah)
-39.	 [Notes, Texts, and Audio for The Essentials Course](https://github.com/ruqyahbd/mtim/wiki/Notes,-Texts,-and-Audio-for-The-Essentials-Course)
-40.	 [O Nouman Ali Khan...Fear Allāh!](https://github.com/ruqyahbd/mtim/wiki/O-Nouman-Ali-Khan...Fear-All%C4%81h!)
-41.	 [Psoriasis, Eczema, and Prophetic Medicine](https://github.com/ruqyahbd/mtim/wiki/Psoriasis,-Eczema,-and-Prophetic-Medicine)
-42.	 [Response to Those Who Defend Ta'weez](https://github.com/ruqyahbd/mtim/wiki/Response-to-Those-Who-Defend-Ta'weez)
-43.	 [Ruqyah Audio](https://github.com/ruqyahbd/mtim/wiki/Ruqyah-Audio)
-44.	 [Ruqyah Clinics](https://github.com/ruqyahbd/mtim/wiki/Ruqyah-Clinics)
-45.	 [Ruqyah for Children](https://github.com/ruqyahbd/mtim/wiki/Ruqyah-for-Children)
-46.	 [Ruqyah for Non‐Muslims](https://github.com/ruqyahbd/mtim/wiki/Ruqyah-for-Non%E2%80%90Muslims)
-47.	 [Ruqyah in the Bradford Area](https://github.com/ruqyahbd/mtim/wiki/Ruqyah-in-the-Bradford-Area)
-48.	 [Ruqyah Programme for Patients](https://github.com/ruqyahbd/mtim/wiki/Ruqyah-Programme-for-Patients)
-49.	 [Simple Things to Protect Yourself from the Shaytaan](https://github.com/ruqyahbd/mtim/wiki/Simple-Things-to-Protect-Yourself-from-the-Shaytaan)
-50.	 [Solving the Email Problem](https://github.com/ruqyahbd/mtim/wiki/Solving-the-Email-Problem)
-51.	 [Success in Secular Studies](https://github.com/ruqyahbd/mtim/wiki/Success-in-Secular-Studies)
-52.	 [Travelling for Ruqyah](https://github.com/ruqyahbd/mtim/wiki/Travelling-for-Ruqyah)
-53.	 [Trying for a Baby Without Success](https://github.com/ruqyahbd/mtim/wiki/Trying-for-a-Baby-Without-Success)
-54.	 [Using Truffle Water](https://github.com/ruqyahbd/mtim/wiki/Using-Truffle-Water)
-55.	 [Video Lectures](https://github.com/ruqyahbd/mtim/wiki/Video-Lectures)
-56.	 [Where Do I Start?](https://github.com/ruqyahbd/mtim/wiki/Where-Do-I-Start%3F)
-57.	 [Who Cares About the Truth!?](https://github.com/ruqyahbd/mtim/wiki/Who-Cares-About-the-Truth!%3F)
-58.	 [Why Is My Treatment Taking So Long?](https://github.com/ruqyahbd/mtim/wiki/Why-Is-My-Treatment-Taking-So-Long%3F)
+### 👉 [mtim.ruqyahbd.org](https://mtim.ruqyahbd.org)
 
+We recommend using the website for the best reading experience, as it includes:
 
-**That's All, ALHAMDULILLAH.**
+- 🔍 **Full-text Search**
+- 🌓 **Dark Mode** support
+- 🇧🇩 **Bengali Translation** toggle
+- 📱 **Mobile-friendly** interface
 
-***
+---
+
 ## 🤝 Contributing
+
 This is an open and collaborative effort. If you have any missing notes, old downloads, or related content from Ustadh Tim Humble that’s not yet here, please consider sharing via pull request or opening an issue.
 📩 Your help will benefit many others seeking Ruqyah guidance, in shā’ Allāh.
 
