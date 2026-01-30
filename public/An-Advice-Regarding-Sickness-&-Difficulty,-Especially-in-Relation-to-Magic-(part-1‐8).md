@@ -1,7 +1,6 @@
 [title: Advices Regarding Sickness & Difficulty, Especially about Magic - muhammadtim.com]:/
 [menu-locgroup: advice]:/
-[alias: /advice/8]:/
-[alias: /articles/advice/8]:/
+[date: 2015-09-09]:/
 
 # An Advice Regarding Sickness & Difficulty, Especially in Relation to Magic
 

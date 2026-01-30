@@ -1,7 +1,7 @@
 [title: 7 Day Ruqyah Detox Programme - muhammadtim.com]:/
 [menu: 7 Day Detox]:/
 [path: /ruqyah/7-day-detox]:/
-[menu-locgroup: ruqyah]:/
+[date: 2013-11-16]:/
 [order: 3]:/
 
 # 7 Day Ruqyah Detox Programme 

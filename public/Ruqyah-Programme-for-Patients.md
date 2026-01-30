@@ -1,6 +1,7 @@
 [title: Ruqyah Programme for Patients - muhammadtim.com]:/
 [menu: Ruqyah Programme]:/
 [menu-locgroup: ruqyah]:/
+[date: 2014-01-26]:/
 [order: 2]:/
 
 # Ruqyah Programme for Patients
@@ -32,7 +33,7 @@ We also recommend that patients, or their family and friends keep a record of ho
 
 #### The following things must be done monthly:
 
-* The patient must implement the [7 day programme](/7dayrd), **at least once every month, preferrably twice.**
+* The patient must implement the [7 day programme](https://mtim.ruqyahbd.org/post/7-Day-Ruqyah-Detox-Program), **at least once every month, preferrably twice.**
 
 #### The following things should be done regularly:
 
