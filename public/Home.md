@@ -1,3 +1,7 @@
+[title: Muhammad Tim Humble Homepage - muhammadtim.com]:/
+[menu: Home]:/
+[menu-locgroup: primary]:/
+[order: 1]:/
 
 # Muhammad Tim Humble - muhammadtim.com
 
@@ -23,7 +27,7 @@ Here is a selection of the most popular articles:
 
 * [An Advice to Those Suffering from Sickness and Black Magic](https://mtim.ruqyahbd.org/post/An-Advice-Regarding-Sickness-&-Difficulty,-Especially-in-Relation-to-Magic-(part-1%E2%80%908))
 
-Please also check out the [notes section](https://mtim.ruqyahbd.org/post/Notes-index), currently in development.
+Please also check out the [notes section](https://mtim.ruqyahbd.org/post/Notes-index)
 
 There's also a selection of [video lectures](https://mtim.ruqyahbd.org/post/Muhammad-Tim-Humble's-Video-Lectures), and you can [contact me](https://mtim.ruqyahbd.org/post/Contact-Muhammad-Tim-Humble).
 
