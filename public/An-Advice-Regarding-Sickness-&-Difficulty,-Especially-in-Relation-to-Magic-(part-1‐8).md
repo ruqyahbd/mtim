@@ -1,4 +1,4 @@
-[title: Advice Part Eight: Magic & Magicians - muhammadtim.com]:/
+[title: Advices Regarding Sickness & Difficulty, Especially about Magic - muhammadtim.com]:/
 [menu-locgroup: advice]:/
 [alias: /advice/8]:/
 [alias: /articles/advice/8]:/
