@@ -102,11 +102,13 @@ const Home = () => {
                         left: '1rem',
                         top: '50%',
                         transform: 'translateY(-50%)',
-                        pointerEvents: 'none'
+                        pointerEvents: 'none',
+                        zIndex: 10
                     }}>
                         <Search color="var(--text-muted)" size={18} />
                     </div>
                     <input
+                        autoFocus
                         type="text"
                         placeholder="Search articles..."
                         style={{
@@ -114,12 +116,16 @@ const Home = () => {
                             padding: '0.75rem 1rem 0.75rem 3rem',
                             fontSize: '1rem',
                             borderRadius: '0.5rem',
-                            border: '1px solid var(--border)',
+                            border: '2px solid #eab308', // yellow-500
                             outline: 'none',
-                            backgroundColor: 'var(--card-bg)'
+                            backgroundColor: 'var(--card-bg)',
+                            boxShadow: '0 0 0 4px rgba(234, 179, 8, 0.1)',
+                            transition: 'all 0.2s ease-in-out'
                         }}
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
+                        onFocus={(e) => e.target.style.boxShadow = '0 0 0 4px rgba(234, 179, 8, 0.25)'}
+                        onBlur={(e) => e.target.style.boxShadow = '0 0 0 4px rgba(234, 179, 8, 0.1)'}
                     />
                 </div>
             </section>

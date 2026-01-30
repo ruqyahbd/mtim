@@ -50,7 +50,7 @@ const PostDetail = () => {
             </Link>
 
             <header style={{ marginBottom: '3rem', borderBottom: '1px solid var(--border)', paddingBottom: '2rem' }}>
-                <h1 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '1rem', lineHeight: '1.2' }}>{post.title}</h1>
+                <h1 style={{ fontSize: 'clamp(1.75rem, 6vw, 3rem)', fontWeight: '800', marginBottom: '1rem', lineHeight: '1.1' }}>{post.title}</h1>
                 <div style={{ display: 'flex', gap: '1.5rem', color: 'var(--text-muted)', fontSize: '0.875rem' }}>
                     <span style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
                         <Clock size={14} /> {new Date(post.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}
