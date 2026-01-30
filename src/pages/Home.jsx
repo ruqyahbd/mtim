@@ -8,7 +8,7 @@ import posts from '../data/posts.json';
 const Home = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [oldHomeContent, setOldHomeContent] = useState('');
-    const [isOldHomeExpanded, setIsOldHomeExpanded] = useState(true);
+    const [isOldHomeExpanded, setIsOldHomeExpanded] = useState(false);
 
     useEffect(() => {
         const fetchOldHome = async () => {
