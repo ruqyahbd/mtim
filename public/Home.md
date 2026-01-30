@@ -21,7 +21,7 @@ Here is a selection of the most popular articles:
 
 * [Dealing with Waswasah](https://mtim.ruqyahbd.org/post/Dealing-with-Waswasah)
 
-* [An Advice to Those Suffering from Sickness and Black Magic](https://github.com/ruqyahbd/mtim/wiki/An-Advice-Regarding-Sickness-&-Difficulty,-Especially-in-Relation-to-Magic-(part-1%E2%80%908))
+* [An Advice to Those Suffering from Sickness and Black Magic](https://mtim.ruqyahbd.org/post/An-Advice-Regarding-Sickness-&-Difficulty,-Especially-in-Relation-to-Magic-(part-1%E2%80%908))
 
 Please also check out the [notes section](https://mtim.ruqyahbd.org/post/Notes-index), currently in development.
 
