@@ -26,3 +26,16 @@ dist-ssr
 # Project specific
 trash/
 src/data/posts.json
+
+# Auto-generated agent rules (personalized per developer)
+.brainsync/agent-rules.md
+/.agent-mem
+/.agent
+/.brainsync
+.cursorrules
+AGENT.md
+CLAUDE.md
+
+.agent-mem/
+/.agents
+.windsurfrules

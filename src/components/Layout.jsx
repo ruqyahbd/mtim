@@ -2,10 +2,39 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Home, Github, Sun, Moon, Languages, Book, Menu, X } from 'lucide-react';
 
+const GOOGLE_TRANSLATE_COOKIE = 'googtrans';
+
+const getTranslateCookieValue = () => {
+    const match = document.cookie
+        .split('; ')
+        .find((item) => item.startsWith(`${GOOGLE_TRANSLATE_COOKIE}=`));
+
+    return match ? decodeURIComponent(match.split('=')[1]) : '';
+};
+
+const setTranslateCookie = (value) => {
+    const encodedValue = encodeURIComponent(value);
+    document.cookie = `${GOOGLE_TRANSLATE_COOKIE}=${encodedValue}; path=/; max-age=31536000; SameSite=Lax`;
+
+    if (window.location.hostname && window.location.hostname !== 'localhost') {
+        document.cookie = `${GOOGLE_TRANSLATE_COOKIE}=${encodedValue}; path=/; domain=.${window.location.hostname}; max-age=31536000; SameSite=Lax`;
+    }
+};
+
+const clearTranslateCookie = () => {
+    document.cookie = `${GOOGLE_TRANSLATE_COOKIE}=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+
+    if (window.location.hostname && window.location.hostname !== 'localhost') {
+        document.cookie = `${GOOGLE_TRANSLATE_COOKIE}=; path=/; domain=.${window.location.hostname}; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+    }
+};
+
 const Header = () => {
     const [isDark, setIsDark] = useState(localStorage.getItem('theme') === 'dark');
     const [isBengali, setIsBengali] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [translateReady, setTranslateReady] = useState(false);
+    const [translateError, setTranslateError] = useState(false);
     const location = useLocation();
 
     useEffect(() => {
@@ -22,6 +51,10 @@ const Header = () => {
         setIsMenuOpen(false);
     }, [location]);
 
+    useEffect(() => {
+        setIsBengali(getTranslateCookieValue() === '/en/bn');
+    }, []);
+
     // Google Translate Initialization
     useEffect(() => {
         window.googleTranslateElementInit = () => {
@@ -32,6 +65,8 @@ const Header = () => {
                     layout: window.google.translate.TranslateElement.InlineLayout.SIMPLE,
                     autoDisplay: false
                 }, 'google_translate_element');
+                setTranslateReady(true);
+                setTranslateError(false);
             }
         };
 
@@ -41,31 +76,44 @@ const Header = () => {
             addScript.id = 'google-translate-script';
             addScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
             addScript.async = true;
+            addScript.onload = () => {
+                if (window.google?.translate) {
+                    setTranslateReady(true);
+                }
+            };
+            addScript.onerror = () => {
+                setTranslateError(true);
+            };
             document.body.appendChild(addScript);
+        } else if (window.google?.translate) {
+            setTranslateReady(true);
         }
+
+        return () => {
+            delete window.googleTranslateElementInit;
+        };
     }, []);
 
     const toggleTranslation = () => {
-        const translateCombo = document.querySelector('.goog-te-combo');
-        if (translateCombo) {
-            const targetLang = isBengali ? 'en' : 'bn';
-            translateCombo.value = targetLang;
-            translateCombo.dispatchEvent(new Event('change'));
-            setIsBengali(!isBengali);
+        if (translateError) {
+            alert('Translation service could not be loaded. Check your network or browser blocking settings and try again.');
             return;
         }
 
-        const checkAgain = () => {
-            const retryCombo = document.querySelector('.goog-te-combo');
-            if (retryCombo) {
-                retryCombo.value = isBengali ? 'en' : 'bn';
-                retryCombo.dispatchEvent(new Event('change'));
-                setIsBengali(!isBengali);
-            } else {
-                alert("Translation engine is still loading. Please wait a few seconds and try again.");
-            }
-        };
-        setTimeout(checkAgain, 500);
+        if (!translateReady) {
+            alert('Translation engine is still loading. Please wait a few seconds and try again.');
+            return;
+        }
+
+        if (isBengali) {
+            clearTranslateCookie();
+            setIsBengali(false);
+        } else {
+            setTranslateCookie('/en/bn');
+            setIsBengali(true);
+        }
+
+        window.location.reload();
     };
 
     return (
@@ -153,6 +201,13 @@ const Header = () => {
                 .btn-icon {
                     padding: 0.6rem !important;
                     width: auto !important;
+                }
+                #google_translate_element {
+                    position: absolute;
+                    left: -9999px;
+                    top: 0;
+                    opacity: 0;
+                    pointer-events: none;
                 }
             `}</style>
         </header>
